@@ -1,12 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Personagem from './src/telas/Personagem';
+import Informacoes from './src/telas/Informacoes';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+    <Stack.Navigator nitialRouteName='Personagem'>
+        <Stack.Screen name="Personagem" component={Personagem} />
+        <Stack.Screen name="Informacoes" component={Informacoes} />
+      </Stack.Navigator>
+  </NavigationContainer>
   );
 }
 
