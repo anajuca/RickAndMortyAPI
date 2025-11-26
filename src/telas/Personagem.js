@@ -24,7 +24,7 @@ export default function Personagem({ navigation }) {
         if (carregamento) {
           return (
             <View style={styles.center}>
-              <ActivityIndicator size="large" color="red" />
+              <ActivityIndicator size="large" color="green" />
             </View>
           );
         }
@@ -41,7 +41,7 @@ export default function Personagem({ navigation }) {
                 <Image source={{ uri: item.image }} style={styles.image} />
                   <View style={styles.info}>
                   <Text style={styles.name}>{item.name}</Text>
-                  <Text>{item.status} - {item.species}</Text>
+                  <Text style={styles.statusspecies}>{item.status} - {item.species}</Text>
                 </View>
               </TouchableOpacity>
             )}
@@ -49,9 +49,10 @@ export default function Personagem({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  center: { flex: 1, justifyContent: 'center', alignItems: 'center' },
-  card: { flexDirection: 'row', padding: 10, borderBottomWidth: 1, borderColor: '#ccc' },
+  center: { flex: 1, justifyContent: 'center', alignItems: 'center'},
+  card: { flexDirection: 'row', padding: 10, borderBottomWidth: 1, borderColor: '#579156', backgroundColor: '#60a85f' },
   image: { width: 80, height: 80, borderRadius: 40 },
   info: { marginLeft: 10, justifyContent: 'center' },
-  name: { fontSize: 16, fontWeight: 'bold' },
+  name: { fontSize: 16, fontWeight: 'bold', color: '#043c6e'},
+  statusspecies: {color: '#043c6e', opacity: 0.7},
 });
