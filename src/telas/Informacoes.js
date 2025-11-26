@@ -8,7 +8,6 @@ export default function Informacoes({ route }) {
     <View style={styles.container}>
       <Image source={{ uri: character.image }} style={styles.image} />
       <Text style={styles.name}>{character.name}</Text>
-      <Text>Status: {character.status}</Text>
       <Text>Espécie: {character.species}</Text>
     </View>
   );
