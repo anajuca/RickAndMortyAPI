@@ -36,7 +36,7 @@ export default function Personagem({ navigation }) {
             renderItem={({ item }) => (
               <TouchableOpacity 
                 style={styles.card}
-                onPress={() => navigation.navigate('Informacoes', { character: item })}
+                onPress={() => navigation.navigate('Informações', { character: item })}
                 >
                 <Image source={{ uri: item.image }} style={styles.image} />
                   <View style={styles.info}>
@@ -50,9 +50,9 @@ export default function Personagem({ navigation }) {
 
 const styles = StyleSheet.create({
   center: { flex: 1, justifyContent: 'center', alignItems: 'center'},
-  card: { flexDirection: 'row', padding: 10, borderBottomWidth: 1, borderColor: '#579156', backgroundColor: '#60a85f' },
+  card: { flexDirection: 'row', padding: 10, borderBottomWidth: 1, borderColor: '#3b3a3a', backgroundColor: '#242424'},
   image: { width: 80, height: 80, borderRadius: 40 },
   info: { marginLeft: 10, justifyContent: 'center' },
-  name: { fontSize: 16, fontWeight: 'bold', color: '#043c6e'},
-  statusspecies: {color: '#043c6e', opacity: 0.7},
+  name: { fontSize: 16, fontWeight: 'bold', color: '#8bcf21'},
+  statusspecies: {color: '#2f9331', opacity: 0.7},
 });

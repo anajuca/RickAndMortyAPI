@@ -11,8 +11,8 @@ export default function App() {
   return (
     <NavigationContainer>
     <Stack.Navigator nitialRouteName='Personagem'>
-        <Stack.Screen name="Personagem" component={Personagem} options={{headerStyle:{backgroundColor: '#242424'}, headerTintColor: '#42b4ca'}} />
-        <Stack.Screen name="Informacoes" component={Informacoes} />
+        <Stack.Screen name="Personagens" component={Personagem} options={{headerStyle:{backgroundColor: '#242424'}, headerTintColor: '#8bcf21'}} />
+        <Stack.Screen name="Informações" component={Informacoes} options={{headerStyle:{backgroundColor: '#242424'}, headerTintColor: '#8bcf21'}}/>
       </Stack.Navigator>
   </NavigationContainer>
   );
